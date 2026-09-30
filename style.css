@@ -1,3 +1,6 @@
+ *,
+ *::before,
+ *::after{box-sizing: border-box;}
  :root{
             --ink: #a52a2a;
             --smaller: #8a4914;
@@ -19,29 +22,44 @@
             line-height: 1.5;
             /* max-width: 700px; */
             background-color: var(--page);
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
         }
         p{color: gray;}
+
+        /* header---------------------------------------------------- */
+
+
         .first{
             width: 70%;
-            max-width: 700px;
-            /* align-items: center; */
+            /* max-width: 600px; */
+            flex-wrap: wrap;
             justify-items: center;
-           /* padding: calc(var(--step-)*2)var(--step-2);  */
             font-size: var(--step-1);
-            /* box-shadow: #8a4914; */
-            padding: 7.5rem 5.5rem 3.5rem;
+            padding: 5.5rem 4.5rem 3.2rem;
             background-color: var(--new);
-            margin: 0 auto;
+            margin: 40px auto;
             border-radius:var(--step-2);
             box-shadow: 0 2px 10px;
-
-
         }
         .head{
             display: flex;
+            flex-wrap: wrap;
             /* border: 1px solid var(--smaller); */
             justify-content: space-between;
-            line-height: 1;
+            align-items: center;
+            /* line-height: 1; */
+        }
+        .address{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            flex: 1 1 200px;
+            /* padding: 20px; */
+
         }
        .span{
             background-color: #8b49136e;
@@ -53,31 +71,33 @@
         h1{
             font-size: 4.5rem;
         }
-        img{
+        .first img{
             width: 700px;
+            height: auto;
+            display: block;
             /* justify-content: center; */
             -ms-flex-align: center;
             /* margin-left: rem; */
         }
-        .head{
-            /* padding: var(--step-2); */
-            /* border: 1px solid var(--ink); */
-            gap: var(--step-3);
-        }
-        .container{
-         /* min-width: 700px; */
-         /* justify-items: center; */
-         /* margin: 0 auto; */
-         /* font-size: var(--step-3); */
-         /* background-color: var(--link);  */
-         /* padding: var(--step-2); */
-         background-color: var(--new);
-         width: 80%;
-         margin: 40px auto;
-         border-radius: 20px;
-         box-shadow: 0 2px 10px ;
-         padding: var(--step-2);
-         line-height: 1;
+        /* .head{
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* gap: var(--step-3); */
+        /*} 
+        /*-------container---------------------------------------------------------------- */
+
+        .container {
+          /* display: flex; */
+            background-color: var(--new);
+            width: 80%;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px;
+            padding: var(--step-2);
+            text-align: left;
+            justify-content: space-between;
+            line-height: 1;  
+            flex-direction: column;
         }
         h2{
             font-size: 35px;
@@ -87,21 +107,38 @@
             line-height: 1.6;
             color: gray;
         }
+        /* -----------------container1--1-------------------------------------------- */
         .container1{
-            background-color: var(--new);
+            /* display: flex; */
+            /* background-color: var(--new);
             width: 80%;
             margin: 40px auto;
             border-radius: 20px;
             box-shadow: 0 2px 10px;
             padding: var(--step-2);
             text-align: left;
-            line-height: 1;    
+            justify-content: space-between;
+            line-height: 1;  
+            flex-direction: column; */
+            background-color: var(--new);
+            width: 80%;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px ;
+            padding: var(--step-2);
+            line-height: 1;
         }
-        .box1{display: flex;}
+        .box1{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
 
         .box1 h3{color: var(--ink);}
         span{color: var(--ink);}
         .box1 .box{
+            flex: 1 1 200px;
+            flex-wrap: wrap;
             border: 1px solid gray;
             border-radius: 20px;
             margin: 20px;
@@ -109,7 +146,10 @@
             line-height: 1;
 
         }
+
+        /* -------container--2---------------------------------------------------- */
         .container2{
+            flex-direction: column;
             background-color: var(--new);
             width: 80%;
             margin: 40px auto;
@@ -118,15 +158,23 @@
             padding: var(--step-2);
 
         }
-        .box2{display: flex;}
+        .box2{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
 
         .box2 .box{
+            flex: 1 1 100px;
             border: 1px solid gray;
             margin: var(--step-3);
             padding: var(--step-2);
             border-radius: 20px;
             line-height: 1.3;
         }
+
+        /* -------container--3------------------------------------------------------------------ */
+
 
         .container3{
             background-color: var(--new);
@@ -135,15 +183,22 @@
             border-radius: 20px;
             box-shadow: 0 2px 10px;
             padding: var(--step-2);
+            flex-direction: column;
         }
-        .box3{display: flex;}
+        .box3{
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         .box3 .box{
             border: 1px solid gray;
             margin: var(--step-3);
             padding: var(--step-2);
             border-radius: 20px;
+            flex: 1 5 200px;
         }
+
+        /* -----container---4------------------------------------------------------------------ */
 
         .container4{
             background-color: var(--new);
@@ -154,6 +209,8 @@
             padding: var(--step-2);
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
         }
         .container4 .box{
             padding: var(--step-2);
